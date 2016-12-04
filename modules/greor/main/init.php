@@ -111,7 +111,11 @@ Route::set('admin_error', 'admin/error/<action>(/<message>)', array('action' => 
 		'controller' => 'error'
 	));
 
-	
+Route::set('sitemap', 'sitemap')
+	->defaults(array(
+		'controller' => 'sitemap',
+		'action'     => 'index',
+	));
 	
 Route::set('widgets', 'widgets/<controller>(/<action>(/<id>))(?<query>)')
 	->defaults(array(
